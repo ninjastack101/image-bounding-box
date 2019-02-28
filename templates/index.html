@@ -1,0 +1,83 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}Test App{% endblock %}</title>
+    <link rel="icon" type="image/png" href="{% static 'img/favicon-32x32.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon-16x16.png' %}" sizes="16x16">
+    <link href="{% static 'css/index.css' %}" rel="stylesheet">
+    {% block stylesheet %}{% endblock %}
+
+    {% block javascript %}
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+   <script src="{% static 'js/index.js' %}"></script>
+  {% endblock %}
+
+
+</head>
+<body>
+
+    <div class="header">
+    <ul class="region_shape">
+      <li> Region Shape</li>
+      <li id="rect">
+        <svg id="shape_rectangle" width="40" height="32">
+          <title>Rectangular region shape</title>
+          <rect width="20" height="12" x="6" y="10" stroke-width="2"></rect>
+        </svg>
+      </li>
+      <li id="poly">
+        <svg height="32" viewBox="0 0 32 32">
+          <use xlink:href="#shape_polyline">
+
+            <svg id="shape_polyline" width="100%" height="100%">
+              <title>Polyline region shape</title>
+              <path d="M 2,12 10,24 18,12 24,18" stroke-width="2"></path>
+              <circle r="1" cx="2" cy="12" stroke-width="2"></circle>
+              <circle r="1" cx="10" cy="24" stroke-width="2"></circle>
+              <circle r="1" cx="18" cy="12" stroke-width="2"></circle>
+              <circle r="1" cx="24" cy="18" stroke-width="2"></circle>
+            </svg>
+          </use>
+        </svg>
+      </li>
+    </ul>
+  </div>
+
+  <aside class="left-sidebar">
+    <p>Select Image</p>
+    <ul>
+      <li>
+        <img id="img1" src="{% static 'img/img1.jpeg' %}" width="100px">
+      </li>
+      <li>
+        <img id="img2" src="{% static 'img/img2.jpeg' %}" width="100px">
+      </li>
+      <li>
+        <img id="img3" src="{% static 'img/img3.jpeg' %}" width="100px">
+      </li>
+      <li>
+        <img id="img4" src="{% static 'img/img4.jpeg' %}" width="100px">
+      </li>
+      <li>
+        <img id="img5" src="{% static 'img/img5.png' %}" width="100px">
+      </li>
+    </ul>
+  </aside>
+  <div class="content-wrapper" id="wrapper">
+    <div class="image-container" id="target-image">
+      <svg id="artboard-svg" width="100%" height="100%"></svg>
+    </div>
+
+    <div class="btn-block">
+      <button id="btn-save" type="button">Save</button>
+      <button id="btn-reset" type="button">Reset</button>
+    </div>
+  </div>
+
+</body>
+</html>
+    
