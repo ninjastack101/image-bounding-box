@@ -73,3 +73,71 @@ ul.region_shape li:hover {
     stroke: #ff0000;
 }
  
+ 
+
+aside.left-sidebar {
+    width:225px;
+    position: fixed;
+    border-right: 1px solid #ececec;
+    padding-top: 50px;
+    height:100%;
+}
+
+aside.left-sidebar p {
+    text-align: center;
+}
+
+aside.left-sidebar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: auto;
+    max-height: 650px;
+}
+
+aside.left-sidebar ul li {
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    padding: 15px 21px 15px 0;
+    border-bottom:1px solid #ececec;
+}
+
+aside.left-sidebar ul li img {
+    cursor: pointer;
+}
+
+.content-wrapper {
+    margin-left: 250px;
+    text-align: center;
+    padding-top:100px;
+}
+
+.image-container {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/static/img/img1.jpeg");
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 5% auto;
+}
+
+.btn-block button {
+    background: #ff9900;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 44px;
+    margin-right: 35px;
+}
+
+div#target-image svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+     border: 1px solid #333;
+    border-radius: 4px;
+}
