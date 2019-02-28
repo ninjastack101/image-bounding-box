@@ -1,3 +1,9 @@
 from django.contrib import admin
+from myapp.models import Task
 
-# Register your models here.
+
+class TaskAdmin(admin.ModelAdmin):
+    list_display = ('image_detail',)
+
+
+admin.site.register(Task, TaskAdmin)
